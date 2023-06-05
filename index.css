@@ -1,0 +1,133 @@
+*, *::before, *::after {
+    box-sizing: border-box;     
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+
+.header-icons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.profile-icon,
+.chat-icon {
+    width: 34px;
+    height: 34px;
+}
+
+.logo {
+    width: 85px;
+    height: 40px;
+}
+
+/* DOG PROFILES */
+
+.dog-container {
+    position: relative;
+}
+
+.like-badge,
+.nope-badge {
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    left: 14px;
+    transform: rotate(-30deg);
+    display: none;
+}
+
+.dog-avatar {
+    width: 100%;
+    border-radius: 2%;
+}
+
+.dog-text {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.dog-info {
+    color: #F8F8F8;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.dog-bio {
+    color: #B7B7B7;
+}
+
+.liked-dog {
+    margin: 1em 0.25em;
+}
+
+.liked-dog-title {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* INTERACTION ICONS */
+
+.interaction-icons {
+    gap: 1em;
+    margin: 10px;
+}
+
+.interaction-icons,
+.interaction-icon-cross,
+.interaction-icon-heart {
+    display: flex;
+    justify-content: center;
+}
+
+.interaction-icon-cross,
+.interaction-icon-heart {
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 20px #E9E9EA;
+    cursor: pointer;
+}
+
+.interaction-icon-cross:hover,
+.interaction-icon-cross:active {
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px #EDD9DF;
+}
+
+.interaction-icon-heart:hover,
+.interaction-icon-heart:active {
+    background: #DBFFF4;
+    box-shadow: 0px 10px 20px #CCF1E6;
+}
+
+.cross,
+.heart {
+    width: 30px;
+    height: 30px;
+}
+
+/* MEDIA QUERIES */
+
+@media(min-width: 480px) {
+    .header-icons-container,
+    .dog-profiles-container,
+    .interaction-icons-container {
+        max-width: 460px;
+        margin: 0 auto;
+    }
+    
+    .liked-dog {
+        display: inline-block;
+        width: 30%;
+    }
+}
